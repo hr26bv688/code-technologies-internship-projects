@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SMS Hospital Jaipur | Official OPD Booking Portal</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+    <a href="#" class="logo">SMS Hospital Jaipur</a>
+    <ul class="nav-links">
+        <li><a href="#book">OPD Booking</a></li>
+        <li><a href="#">Lab Reports</a></li>
+        <li><a href="#">Emergency</a></li>
+    </ul>
+</nav>
+
+<section class="hero">
+    <div class="hero-text">
+        <h1 style="color: var(--primary);">Sawai Man Singh <br><span style="color: var(--rajasthan-orange);">OPD Portal</span></h1>
+        <p>Official Digital Portal for OPD Appointments. Skip the long queues and book your visit online.</p>
+        <button onclick="document.getElementById('book').scrollIntoView()" class="confirm-btn" style="width: auto; padding: 15px 40px; background: var(--primary);">Get Appointment</button>
+    </div>
+    <div class="hero-image">
+        <img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=800&q=80" alt="Hospital Entrance">
+    </div>
+</section>
+
+<div class="container" id="book">
+    <div class="section-header">
+        <h2>Digital OPD Registration</h2>
+    </div>
+    
+    <div class="booking-grid">
+        <div class="card">
+            <div class="card-title">📝 1. Patient Details</div>
+            <div class="input-group">
+                <label>Department</label>
+                <select id="docSelect">
+                    <option value="" disabled selected>Choose Specialty</option>
+                    <option>General Medicine</option>
+                    <option>Cardiology</option>
+                    <option>Orthopedics</option>
+                    <option>Pediatrics (JK Lone)</option>
+                    <option>Neurology</option>
+                </select>
+            </div>
+            <div class="input-group">
+                <label>Full Name</label>
+                <input type="text" id="userName" placeholder="As per Jan-Aadhaar">
+            </div>
+            <div class="input-group">
+                <label>Mobile Number</label>
+                <input type="tel" id="userPhone" placeholder="+91">
+            </div>
+            <div class="note-box">
+                <strong>Note:</strong> Carry your Jan-Aadhaar or Bhamashah card for free government benefits under Rajasthan health schemes.
+            </div>
+        </div>
+
+        <div class="card calendar-card">
+            <div>
+                <div class="card-title">📅 2. Select Date & Time</div>
+                
+                <div class="calendar-nav">
+                    <button onclick="changeMonth(-1)">❮</button>
+                    <span id="monthDisplay">Month Year</span>
+                    <button onclick="changeMonth(1)">❯</button>
+                </div>
+                <div class="calendar-grid" id="calendar">
+                    <div class="day header">S</div><div class="day header">M</div><div class="day header">T</div>
+                    <div class="day header">W</div><div class="day header">T</div><div class="day header">F</div>
+                    <div class="day header">S</div>
+                </div>
+
+                <label style="margin-top: 25px;">Available Slots</label>
+                <div class="slot-grid">
+                    <button class="time-btn">08:00 AM</button>
+                    <button class="time-btn">09:30 AM</button>
+                    <button class="time-btn">11:00 AM</button>
+                    <button class="time-btn">12:30 PM</button>
+                    <button class="time-btn">02:00 PM</button>
+                    <button class="time-btn">03:30 PM</button>
+                </div>
+            </div>
+            <button class="confirm-btn" id="confirmBtn" disabled>Generate OPD Token</button>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <div class="footer-grid">
+        <div>
+            <div class="footer-brand">SMS Hospital Jaipur</div>
+            <p>Sawai Man Singh Medical College & Hospital. Dedicated to public health excellence.</p>
+        </div>
+        <div>
+            <h4>Quick Help</h4>
+            <ul class="footer-links">
+                <li><a href="#">Blood Bank</a></li>
+                <li><a href="#">RGHS Portal</a></li>
+                <li><a href="#">Emergency Contact</a></li>
+            </ul>
+        </div>
+        <div>
+            <h4>Address</h4>
+            <p>📍 JLN Marg, Jaipur, Rajasthan</p>
+            <p>📞 0141-2560291</p>
+            <p>✉️ info@smsjaipur.gov.in</p>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>© 2025 SMS Hospital. Government of Rajasthan.</p>
+    </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
